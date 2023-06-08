@@ -66,7 +66,7 @@ class Bd {
 
 		for (i = 0; i < despesasFiltradas.length; i++){
 			if (despesasFiltradas[i].nome = despesa.nome){
-				Document.getElementById('nome') = despesasFiltradas[i].nome
+				Document.getElementById('nome').innerHTML = despesasFiltradas[i].nome
 			}	
 		}
 	}
