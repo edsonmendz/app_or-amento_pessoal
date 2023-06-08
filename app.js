@@ -61,7 +61,14 @@ class Bd {
 	}
 
 	pesquisar(despesa) {
+		let despesasFiltradas = Array ()
+		despesasFiltradas = this.recuperarTodosRegistros()
 
+		for (i = 0; i < despesasFiltradas.length; i++){
+			if (despesasFiltradas[i].nome = despesa.nome){
+				Document.getElementById('nome') = despesasFiltradas[i].nome
+			}	
+		}
 	}
 }
 
