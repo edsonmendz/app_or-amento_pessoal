@@ -87,7 +87,8 @@ class Bd {
 		if (despesa.valor != ''){
 			despesasFiltradas = despesasFiltradas.filter(d => d.valor == despesa.valor)
 		}
-	}
+		console.log(despesasFiltradas)
+	}	
 }
 
 	let bd = new Bd ()
@@ -182,5 +183,5 @@ function pesquisarDespesa() {
 
 	let despesa = new Despesa(ano, mes, dia, tipo, descricao, valor)
 
-	bd.pesquisar()
+	bd.pesquisar(despesa)
 }
