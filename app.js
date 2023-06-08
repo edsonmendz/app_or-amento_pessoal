@@ -64,15 +64,33 @@ class Bd {
 		let despesasFiltradas = Array ()
 		despesasFiltradas = this.recuperarTodosRegistros()
 
-		for (i = 0; i < despesasFiltradas.length; i++){
-			if (despesasFiltradas[i].nome = despesa.nome){
-				Document.getElementById('nome').innerHTML = despesasFiltradas[i].nome
-			}	
+		if (despesa.ano != ''){
+		despesasFiltradas = despesasFiltradas.filter(d => d.ano == despesa.ano)
+		}
+
+		if (despesa.mes != ''){
+			despesasFiltradas = despesasFiltradas.filter(d => d.mes == despesa.mes)
+		}
+
+		if (despesa.dia != ''){
+			despesasFiltradas = despesasFiltradas.filter(d => d.dia == despesa.dia)
+		}
+
+		if (despesa.tipo != ''){
+			despesasFiltradas = despesasFiltradas.filter(d => d.tipo == despesa.tipo)
+		}
+		
+		if (despesa.descricao != ''){
+			despesasFiltradas = despesasFiltradas.filter(d => d.descricao == despesa.descricao)
+		}
+
+		if (despesa.valor != ''){
+			despesasFiltradas = despesasFiltradas.filter(d => d.valor == despesa.valor)
 		}
 	}
 }
 
-let bd = new Bd ()
+	let bd = new Bd ()
 
 function cadastrarDespesa() {
 	let ano = document.getElementById('ano')
@@ -128,8 +146,7 @@ function carregaListaDespesas() {
 
     //percorrer ARRAY despesas, listando cada despesa de forma diNãmica
 
-    despesas.forEach(function(d) {
-    	console.log(d)
+    despesas.forEach(function(d) {    	
     	//criando a linha <tr>
     	let linha = listaDespesas.insertRow()
     	//inserir valores, criar as colunas
