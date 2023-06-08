@@ -132,10 +132,8 @@ function carregaListaDespesas( despesas = Array (), filtro = false) {
 
 	if (despesas.length == 0 && filtro == false) {
 		despesas = bd.recuperarTodosRegistros()
-	}
+	}	
 	
-
-	despesas = bd.recuperarTodosRegistros()
 	//selecionando o elemento tbody da tabela
 	let listaDespesas = document.getElementById('listaDespesas')
 	listaDespesas.innerHTML = ''
