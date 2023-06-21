@@ -129,6 +129,11 @@ function cadastrarDespesa() {
 		descricao.value = ''
 		valor.value = ''
 	} else {
+		document.getElementById('titulo').className = 'modal-header text-danger'
+		document.getElementById('exampleModalLabel').innerHTML = 'Algum campo está incorreto.'
+		document.getElementById('resposta').innerHTML = 'Despesa não foi registrada'
+		document.getElementById('botao').className = 'btn btn-danger'
+
 		$('#chamarModal').modal('show')
 	}
 }
