@@ -120,6 +120,7 @@ function cadastrarDespesa() {
 		document.getElementById('exampleModalLabel').innerHTML = 'Gravação bem sucedida!'
 		document.getElementById('resposta').innerHTML = 'Despesa registrada com sucesso!'
 		document.getElementById('botao').className = 'btn btn-success'
+		document.getElementById('botao').innerHTML = 'Fechar'
 		bd.gravar(despesa)		
 		$('#chamarModal').modal('show')
 		ano.value = ''
@@ -133,6 +134,8 @@ function cadastrarDespesa() {
 		document.getElementById('exampleModalLabel').innerHTML = 'Algum campo está incorreto.'
 		document.getElementById('resposta').innerHTML = 'Despesa não foi registrada'
 		document.getElementById('botao').className = 'btn btn-danger'
+		document.getElementById('botao').innerHTML = 'Voltar e corrigir'
+		
 
 		$('#chamarModal').modal('show')
 	}
